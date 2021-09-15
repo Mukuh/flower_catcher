@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn 'flowr:create_app()'
