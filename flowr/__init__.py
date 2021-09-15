@@ -14,7 +14,7 @@ DB_NAME = "users.db"
 def create_app() -> Flask:
     # create and configure the app
     app = Flask(__name__)
-    app.config['SECRET_KEY']='dev' # TODO: CHANGE THIS LATER!
+    app.config['SECRET_KEY'] = 'f,eetDThlUwruX=q"Tn5{vJ=7N:_&U{yMJ>e-9p'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     # surpress warning by disabling the SQLAlchemy's built-in event system
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
