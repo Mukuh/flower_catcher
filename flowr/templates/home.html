@@ -4,13 +4,16 @@
 {% endblock %}
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">Hello, everyone!</h1>
+  {% if user.is_authenticated %}
+    <h1 class="display-4">Hello, {{current_user.username}} !</h1>
+    <p class="lead">Willkommen auf meiner ersten Flask Webseite.</p>
+    <hr class="my-4">
+    <p>Lasst uns etwas interessantes machen...</p>
+  {% else %}
+  <h1 class="display-4">Hello, everyone!</h1>
     <p class="lead">Das ist meine erste Flask Webseite.</p>
     <hr class="my-4">
     <p>Lasst uns etwas interessantes machen...Noch kein Account? Kein Problem!</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" id="btn_sign_in" href="#" role="button">Sign in</a>
-      <a class="btn btn-primary btn-lg" id="btn_login" href="#" role="button">Login</a>
-    </p>
+  {% endif %}
   </div>
 {% endblock %}

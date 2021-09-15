@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}
+    Sign In
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <br/>
+        <h2 class="fw-bolder">Sign In</h2>
+        <p>Enter your Email and password to sign in</p>
+        <form method="POST">
+            <div class="form-floating mb-2">
+                <input type="email" class="form-control" id="email" name="email">
+                <label for="email">Email Address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="password" name="password">
+                <label for="password">Password</label>
+            </div>
+            <br/>
+            <button class="btn btn-secondary" type="submit">Sign In</button>
+            <p>No Account yet? Just make one! <a href="/sign_up">Sign Up</a></p>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}
