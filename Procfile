@@ -1,1 +1,1 @@
-web: gunicorn flowr:app
+web: gunicorn app:app
